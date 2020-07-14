@@ -13,23 +13,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+include device/rockchip/rk3326/BoardConfig.mk
+BUILD_WITH_GO_OPT := false
 
-PRODUCT_MAKEFILES := \
-        $(LOCAL_DIR)/PX30_Android10/PX30_Android10.mk \
-        $(LOCAL_DIR)/rk3326_pie/rk3326_pie.mk \
-        $(LOCAL_DIR)/rk3326_q/rk3326_q.mk \
-        $(LOCAL_DIR)/rk3326_qgo/rk3326_qgo.mk \
-        $(LOCAL_DIR)/rk3326_r/rk3326_r.mk \
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv8-a
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_VARIANT := cortex-a53
+TARGET_CPU_SMP := true
 
-COMMON_LUNCH_CHOICES := \
-    rk3326_pie-userdebug \
-    rk3326_pie-user \
-    PX30_Android10-userdebug \
-    PX30_Android10-user \
-    rk3326_q-userdebug \
-    rk3326_q-user \
-    rk3326_qgo-userdebug \
-    rk3326_qgo-user \
-    rk3326_r-userdebug \
-    rk3326_r-user \
+PRODUCT_KERNEL_CONFIG := rockchip_defconfig android-11.config rk3326.config
+PRODUCT_KERNEL_DTS := rk3326-863-lp3-v10-rkisp1
+# AB image definition
+BOARD_USES_AB_IMAGE := false
 
+ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
+    include device/rockchip/common/BoardConfig_AB.mk
+    TARGET_RECOVERY_FSTAB := device/rockchip/rk3326/rk3326_r/recovery.fstab_AB
+endif

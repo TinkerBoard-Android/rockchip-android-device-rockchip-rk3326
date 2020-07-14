@@ -45,7 +45,6 @@ BOARD_OVERRIDE_RS_CPU_VARIANT_64 := cortex-a53
 TARGET_USES_64_BIT_BCMDHD := true
 TARGET_USES_64_BIT_BINDER := true
 
-TARGET_ROCKCHIP_PCBATEST := true
 # HACK: Build apps as 64b for volantis_64_only
 ifneq (,$(filter ro.zygote=zygote64, $(PRODUCT_DEFAULT_PROPERTY_OVERRIDES)))
 TARGET_PREFER_32_BIT_APPS :=
@@ -70,12 +69,6 @@ TARGET_BOARD_PLATFORM_PRODUCT ?= tablet
 endif
 endif
 
-ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
-    DEVICE_MANIFEST_FILE := device/rockchip/rk3326/manifest_ab.xml
-else
-    DEVICE_MANIFEST_FILE := device/rockchip/rk3326/manifest.xml
-endif
-
 ENABLE_CPUSETS := true
 
 # Enable Dex compile opt as default
@@ -94,7 +87,7 @@ BOARD_TEMPERATURE_SENSOR_SUPPORT := false
 BOARD_USB_HOST_SUPPORT := true
 
 #for optee support
-PRODUCT_HAVE_OPTEE ?= true
+#PRODUCT_HAVE_OPTEE ?= true
 BOARD_USE_SPARSE_SYSTEM_IMAGE := true
 
 # Google Service and frp overlay
