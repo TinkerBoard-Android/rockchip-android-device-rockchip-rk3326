@@ -51,12 +51,6 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product-if-exists, vendor/rockchip/rk3326/device-vendor.mk)
 
-# for enable optee support
-ifeq ($(strip $(PRODUCT_HAVE_OPTEE)),true)
-PRODUCT_COPY_FILES += \
-       device/rockchip/common/init.optee_verify.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.optee.rc
-endif
-
 # Reduces GC frequency of foreground apps by 50%
 PRODUCT_PROPERTY_OVERRIDES += \
                dalvik.vm.foreground-heap-growth-multiplier=2.0
