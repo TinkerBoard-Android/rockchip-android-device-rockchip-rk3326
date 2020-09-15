@@ -23,8 +23,8 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
 TARGET_CPU_SMP := true
 
-PRODUCT_KERNEL_CONFIG := rockchip_defconfig android-10.config rk3326.config
-PRODUCT_KERNEL_DTS := rk3326-evb-lp3-v10-avb
+PRODUCT_KERNEL_CONFIG := rockchip_defconfig android-11.config rk3326.config
+PRODUCT_KERNEL_DTS := rk3326-863-lp3-v10-rkisp1
 # AB image definition
 BOARD_USES_AB_IMAGE := false
 

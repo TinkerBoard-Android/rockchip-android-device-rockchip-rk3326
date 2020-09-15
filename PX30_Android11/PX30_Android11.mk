@@ -20,8 +20,8 @@ PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 PRODUCT_BOOT_DEVICE := ff390000.dwmmc,ff3b0000.nandc
 
 include device/rockchip/common/build/rockchip/DynamicPartitions.mk
+include device/rockchip/rk3326/PX30_Android11/BoardConfig.mk
 include device/rockchip/common/BoardConfig.mk
-include device/rockchip/rk3326/rk3326_qgo/BoardConfig.mk
 $(call inherit-product, device/rockchip/rk3326/device-common.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
 
@@ -29,10 +29,10 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_CHARACTERISTICS := tablet
 
-PRODUCT_NAME := rk3326_qgo
-PRODUCT_DEVICE := rk3326_qgo
+PRODUCT_NAME := PX30_Android11
+PRODUCT_DEVICE := PX30_Android11
 PRODUCT_BRAND := rockchip
-PRODUCT_MODEL := rk3326_qgo
+PRODUCT_MODEL := PX30_Android11
 PRODUCT_MANUFACTURER := rockchip
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
