@@ -25,8 +25,6 @@ include device/rockchip/common/BoardConfig.mk
 $(call inherit-product, device/rockchip/rk3326/device-common.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
 
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
 PRODUCT_CHARACTERISTICS := tablet
 
 PRODUCT_NAME := rk3326_rgo
@@ -36,17 +34,5 @@ PRODUCT_MODEL := rk3326_rgo
 PRODUCT_MANUFACTURER := rockchip
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
-# Enable DM file preopting to reduce first boot time
-PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
-
-# Save space for Go-device
-DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
-#
 ## add Rockchip properties
-#
 PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=160
-# Reduces GC frequency of foreground apps by 50%
-PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.foreground-heap-growth-multiplier=2.0
-# set zygote
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.zygote=zygote32

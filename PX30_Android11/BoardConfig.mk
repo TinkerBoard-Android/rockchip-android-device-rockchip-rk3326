@@ -24,5 +24,5 @@ TARGET_CPU_VARIANT := cortex-a53
 TARGET_CPU_SMP := true
 
 PRODUCT_UBOOT_CONFIG := px30
-PRODUCT_KERNEL_CONFIG := rockchip_defconfig android-10-go.config rk3326.config
+PRODUCT_KERNEL_CONFIG := rockchip_defconfig android-11-go.config rk3326.config
 PRODUCT_KERNEL_DTS := px30-evb-ddr3-v10-avb
