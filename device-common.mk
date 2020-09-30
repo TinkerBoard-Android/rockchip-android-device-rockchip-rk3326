@@ -104,6 +104,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
                 ro.ril.ecclist=112,911 \
                 ro.opengles.version=196610 \
+                persist.vendor.rk_vulkan=true \
                 wifi.interface=wlan0 \
                 rild.libpath=/system/lib/libril-rk29-dataonly.so \
                 rild.libargs=-d /dev/ttyACM0 \
