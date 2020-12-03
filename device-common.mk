@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
 
 # enable this for support f2fs with data partion
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+BOARD_SEPOLICY_DIRS += device/rockchip/rk3326/sepolicy_vendor
 
 # used for fstab_generator, sdmmc controller address
 PRODUCT_SDMMC_DEVICE := ff370000.dwmmc
