@@ -27,6 +27,7 @@ PRODUCT_KERNEL_CONFIG := rockchip_defconfig android-11.config rk3326.config
 PRODUCT_KERNEL_DTS := rk3326-863-lp3-v10-rkisp1
 # AB image definition
 BOARD_USES_AB_IMAGE := false
+BOARD_USES_VIRTUAL_AB_RETROFIT := false
 
 ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     include device/rockchip/common/BoardConfig_AB.mk
