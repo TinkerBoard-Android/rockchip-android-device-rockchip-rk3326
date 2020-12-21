@@ -63,7 +63,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.version = 1.0.0 \
     ro.product.ota.host = www.rockchip.com:2300 \
     ro.vendor.sdkversion = $(CURRENT_SDK_VERSION) \
-    vendor.gralloc.disable_afbc = 1
+    vendor.gralloc.no_afbc_for_fb_target_layer = 1
 
 #
 ## setup boot-shutdown animation configs.
