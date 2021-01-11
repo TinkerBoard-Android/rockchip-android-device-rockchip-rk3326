@@ -13,10 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-PRODUCT_PACKAGES += \
-    memtrack.$(TARGET_BOARD_PLATFORM) \
-    android.hardware.memtrack@1.0-service \
-    android.hardware.memtrack@1.0-impl
 
 #$_rbox_$_modify_$_zhengyang: add displayd
 PRODUCT_PACKAGES += \
@@ -55,6 +51,10 @@ $(call inherit-product-if-exists, vendor/rockchip/rk3326/device-vendor.mk)
 # Reduces GC frequency of foreground apps by 50%
 PRODUCT_PROPERTY_OVERRIDES += \
                dalvik.vm.foreground-heap-growth-multiplier=2.0
+
+# Disable partial updates
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwui.use_partial_updates=false
 
 # Get the long list of APNs
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system/etc/apns-conf.xml
