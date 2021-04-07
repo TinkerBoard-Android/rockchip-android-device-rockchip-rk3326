@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-# First lunching is Q, api_level is 29
-PRODUCT_SHIPPING_API_LEVEL := 29
+# First lunching is R, api_level is 30
+PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 PRODUCT_BOOT_DEVICE := ff390000.dwmmc,ff3b0000.nandc
 
