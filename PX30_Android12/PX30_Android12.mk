@@ -14,13 +14,13 @@
 # limitations under the License.
 #
 
-# First lunching is R, api_level is 30
-PRODUCT_SHIPPING_API_LEVEL := 30
+# First lunching is S, api_level is 31
+PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 PRODUCT_BOOT_DEVICE := ff390000.dwmmc,ff3b0000.nandc
 
 include device/rockchip/common/build/rockchip/DynamicPartitions.mk
-include device/rockchip/rk3326/PX30_Android11/BoardConfig.mk
+include device/rockchip/rk3326/PX30_Android12/BoardConfig.mk
 include device/rockchip/common/BoardConfig.mk
 $(call inherit-product, device/rockchip/rk3326/device-common.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
@@ -29,10 +29,10 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_CHARACTERISTICS := tablet
 
-PRODUCT_NAME := PX30_Android11
-PRODUCT_DEVICE := PX30_Android11
+PRODUCT_NAME := PX30_Android12
+PRODUCT_DEVICE := PX30_Android12
 PRODUCT_BRAND := rockchip
-PRODUCT_MODEL := PX30_Android11
+PRODUCT_MODEL := PX30_Android12
 PRODUCT_MANUFACTURER := rockchip
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
