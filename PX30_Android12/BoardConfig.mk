@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 include device/rockchip/rk3326/BoardConfig.mk
-BUILD_WITH_GO_OPT := true
+#BUILD_WITH_GO_OPT := true
 
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv8-a
