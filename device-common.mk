@@ -98,6 +98,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += ro.boot.copy_oem=true
 endif
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/public.libraries.txt:vendor/etc/public.libraries.txt
+
 #
 # add Rockchip properties here
 #
