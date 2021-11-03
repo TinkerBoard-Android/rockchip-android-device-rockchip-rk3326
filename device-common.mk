@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Set system properties identifying the chipset
+PRODUCT_VENDOR_PROPERTIES += ro.soc.model=RK3326
+
 #$_rbox_$_modify_$_zhengyang: add displayd
 PRODUCT_PACKAGES += \
     displayd \
