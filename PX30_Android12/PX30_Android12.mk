@@ -45,7 +45,7 @@ DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
 #
 ## add Rockchip properties
 #
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=280
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=240
 # Reduces GC frequency of foreground apps by 50%
 PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.foreground-heap-growth-multiplier=2.0
 # set zygote
