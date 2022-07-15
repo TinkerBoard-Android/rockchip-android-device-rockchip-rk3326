@@ -22,7 +22,7 @@ PRODUCT_KERNEL_ARCH ?= arm64
 PRODUCT_KERNEL_DTS ?= rk3326-863-lp3-v10-rkisp1
 PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig
 #BOARD_AVB_ENABLE := true
-SF_PRIMARY_DISPLAY_ORIENTATION := 0
+SF_PRIMARY_DISPLAY_ORIENTATION ?= 0
 
 # Disable emulator for "make dist" until there is a 64-bit qemu kernel
 BUILD_EMULATOR := false
@@ -39,6 +39,8 @@ BOARD_OVERRIDE_RS_CPU_VARIANT_64 := cortex-a53
 
 TARGET_USES_64_BIT_BCMDHD := true
 TARGET_USES_64_BIT_BINDER := true
+
+PRODUCT_BOOT_DEVICE ?= ff390000.dwmmc,ff3b0000.nandc,ff390000.mmc
 
 # HACK: Build apps as 64b for volantis_64_only
 ifneq (,$(filter ro.zygote=zygote64, $(PRODUCT_DEFAULT_PROPERTY_OVERRIDES)))

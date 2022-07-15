@@ -18,7 +18,6 @@
 PRODUCT_SHIPPING_API_LEVEL := 28
 PRODUCT_FSTAB_TEMPLATE := $(LOCAL_PATH)/fstab.in
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
-PRODUCT_BOOT_DEVICE := ff390000.dwmmc,ff3b0000.nandc
 
 # For upgrading device with retrofit
 BOARD_USES_AB_LEGACY_RETROFIT := false

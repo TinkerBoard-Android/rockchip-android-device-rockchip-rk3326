@@ -17,7 +17,6 @@
 # First lunching is Q, api_level is 29
 PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
-PRODUCT_BOOT_DEVICE := ff390000.dwmmc,ff3b0000.nandc
 
 include device/rockchip/common/build/rockchip/DynamicPartitions.mk
 include device/rockchip/rk3326/rk3326_q/BoardConfig.mk
