@@ -33,7 +33,7 @@ PRODUCT_DEVICE := PX30_Android12
 PRODUCT_BRAND := rockchip
 PRODUCT_MODEL := PX30_Android12
 PRODUCT_MANUFACTURER := rockchip
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Enable DM file preopting to reduce first boot time
 PRODUCT_DEX_PREOPT_GENERATE_DM_FILES := true

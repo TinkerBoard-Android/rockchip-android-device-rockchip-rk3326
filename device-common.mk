@@ -150,5 +150,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
                 wifi.supplicant_scan_interval=15 \
                 ro.factory.tool=0 \
                 ro.kernel.android.checkjni=0 \
-                ro.build.shutdown_timeout=6 \
+                ro.build.shutdown_timeout=6000 \
                 persist.enable_task_snapshots=false
