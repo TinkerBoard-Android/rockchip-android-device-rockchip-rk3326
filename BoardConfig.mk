@@ -68,6 +68,8 @@ endif
 
 ENABLE_CPUSETS := true
 
+PRODUCT_KERNEL_VERSION := 4.19
+
 # Enable Dex compile opt as default
 WITH_DEXPREOPT := true
 
